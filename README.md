@@ -10,7 +10,7 @@ To avoid running the script repeatedly a `readfile` flag can be commented out to
 
 Copy the script into your [WHMCS Crons](https://docs.whmcs.com/Crons) directory. Substitute `/home/mydomain.com/public_html` below with your prefix:
 
-    php -q /home/mydomain.com/public_html/crons/whmcs_virtualmin_usage.php
+    php -q /home/mydomain.com/public_html/crons/virtualmin_whmcs_usage.php
 
 A good interval is hourly or every 6 hours. Once a day should also be fine.
 
