@@ -7,8 +7,8 @@ $virtualmin_password  = "";
 $virtualmin_url       = ""; // e.g. https://cp.domain.com:10000 (no trailing slash)
 
 // Uncomment one or the other if you want to read from disk instead of the API. Useful to study API output.
-$flag = 'output';
-//$flag = 'readfile';
+$flag = 'output'; // Write the API results to a file on disk
+//$flag = 'readfile'; // Read the file on disk instead of calling the API
 
 require_once "$whmcs_root_directory/configuration.php";
 
