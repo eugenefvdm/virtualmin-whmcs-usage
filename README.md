@@ -4,19 +4,19 @@ This script is a workaround if your WHMCS and Virtualmin disk and traffic stats 
 
 It makes a call to the Virtualmin API as the root user with the `?program=list-domains&multiline` parameters, and loops over the output to extract usage information.
 
-To avoid running the script repeatedly a `readfile` flag can be commented out to read the results from disk instead. This is useful for debugging as reading from a Virtualmin server can sometimes take up to 1 minute and 30 seconds.
+To avoid running the script repeatedly a `readfile` flag can be commented out to read the results from disk instead. This is useful for debugging as reading from a Virtualmin server can sometimes take very long.
 
 ## Installation
 
-Copy the script into your WHMCS CRONS directory. Substitute `/home/mydomain.com/public_html` below with your prefix.
+Copy the script into your WHMCS CRONS directory. Substitute `/home/mydomain.com/public_html` below with your prefix:
 
     php -q /home/mydomain.com/public_html/crons/whmcs_virtualmin_usage.php
 
-A good interval is hourly or every 4 hours. Once a day should also be fine.
+A good interval is hourly or every 6 hours. Once a day should also be fine.
 
-By default the script outputs the domains updated on the command line which is useful for debugging. If you want to suppress output, add ` >> /dev/null 2>&1` to the end of the CRON. 
+By default the script outputs the domains updated on the command line which can be used for debugging. If you want to suppress output, add ` >> /dev/null 2>&1` to the end of the CRON. 
 
-## Reasons why you should use this script
+## Why this script?
 
 - WHMCS's script is broken:
 
